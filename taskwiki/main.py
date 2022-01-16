@@ -307,7 +307,8 @@ class Mappings(object):
 
         # No link detected, check for viewport or a task
         if cache().vwtask[row] is not None:
-            SelectedTasks().info()
+            vim.command('TaskSearch')
+            #SelectedTasks().info()
             return
         else:
             port = viewport.ViewPort.from_line(row, cache())
